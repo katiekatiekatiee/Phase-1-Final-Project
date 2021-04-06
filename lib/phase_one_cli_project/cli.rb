@@ -19,21 +19,23 @@ class CLI
     def menu
         choice = user_input
         if choice == "y"
-            #print activity list
+            print_activities
         elsif choice == "exit"
-            exit
+            exit_message
         else
-            #invalid message and rerun method to give options again
+            error_message 
         end
     end
 
     def print_activities
     end
 
-    def exit
-        puts "I hope you found something fun to do! See you again soon!"
+    def error_message
+        puts "I don't recognize that entry. To continue, please enter a valid selection."
     end
 
-
+    def exit_message
+        puts "I hope you found something fun to do! See you again soon!"
+    end
 
 end
