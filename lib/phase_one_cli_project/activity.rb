@@ -1,14 +1,14 @@
 class Activity
 
-    attr_accessor :activity, :type, :price, :participants
+    attr_accessor :activity, :type, :participants, :price 
 
     @@all = []
 
     def initialize(activity, type, price, participants)
         @activity = activity
         @type = type
-        @price = price
         @participants = participants
+        @price = price
         save
     end
 
@@ -20,6 +20,6 @@ class Activity
         @@all
     end
 
-    
+
 
 end

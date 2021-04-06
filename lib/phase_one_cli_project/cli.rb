@@ -2,6 +2,7 @@ class CLI
 
     def start
         puts "Welcome! We're so glad you made it. What should we call you? (Please enter your name)"
+        API.get_data
         input = user_input
         greeting(input)
 
