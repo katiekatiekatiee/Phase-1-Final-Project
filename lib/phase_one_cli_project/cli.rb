@@ -3,8 +3,8 @@ class CLI
     def start
         puts "Welcome! We're so glad you made it. What should we call you? (Please enter your name)"
         API.get_data
-        input = user_input
-        greeting(input)
+        # input = user_input
+        # greeting(input)
 
     end
 
@@ -13,14 +13,14 @@ class CLI
     end
 
     def greeting(name)
-        puts "Nice to meet you, #{name}! Let's find out what we're going to do today! Enter 'y' to get some ideas, or 'exit' to close our session."
+        puts "Nice to meet you, #{name}! You must be bored. Let's fix that! Enter 'y' to get assigned an random, fun activity, or 'exit' to close our session."
         input = user_input
     end
 
     def menu
         choice = user_input
         if choice == "y"
-            print_activities
+            print_random_activity
         elsif choice == "exit"
             exit_message
         else
@@ -28,7 +28,7 @@ class CLI
         end
     end
 
-    def print_activities
+    def print_random_activity
     end
 
     def error_message
