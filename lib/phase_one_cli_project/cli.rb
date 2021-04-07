@@ -31,6 +31,7 @@ class CLI
     def print_random_activity
         Activity.all.each do |random_activity|
             puts "#{random_activity.activity}"
+            #binding.pry
         end
         see_more
     end
@@ -46,7 +47,7 @@ class CLI
             exit_message
         else
             error_message
-    
+        end
     end
 
     def error_message
@@ -57,5 +58,5 @@ class CLI
     def exit_message
         puts "I hope you found something fun to do! See you again soon!"
     end
-
+    
 end
