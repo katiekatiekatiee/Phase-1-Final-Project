@@ -40,7 +40,7 @@ class CLI
         puts "Would you like to learn more about this activity and what it requires? Enter 'y' for yes, 'n' to see a different option, or 'exit' to end our session."
         choice = user_input
         if choice == "y"
-            #print attributes of activity
+            ####
         elsif "n"
             print_random_activity
         elsif "exit"
