@@ -4,12 +4,15 @@ class Activity
 
     @@all = []
 
-    def initialize(activity, type, price, participants)
-        @activity = activity
-        @type = type
-        @participants = participants
-        @price = price
-        save
+    def initialize (activity_hash)
+        # @activity = activity
+        # @type = type
+        # @participants = participants
+        # @price = price
+        activity_hash.each do |key, value|
+            self.send("#{key}=", value) if self.respond_to?("#{key}=")
+        end
+      save
     end
 
     def save 
