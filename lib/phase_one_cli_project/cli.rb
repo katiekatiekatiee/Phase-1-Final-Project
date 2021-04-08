@@ -28,14 +28,12 @@ class CLI
         end
     end
 
-    # def print_random_activity
-    #     Activity.all.each do |random_activity|
-    #         binding.pry
-    #         puts "#{random_activity[0]}"
-    #         # binding.pry
-    #     end
-    #     see_more
-    # end
+    def print_random_activity
+        Activity.all.each do |random_activity|
+            puts "#{random_activity.activity}"   #NEEDS TO BE WAY PRETTIER
+        end
+        see_more
+    end
 
     def see_more
         puts "Would you like to learn more about this activity and what it requires? Enter 'y' for yes, 'n' to see a different option, or 'exit' to end our session."
@@ -51,7 +49,7 @@ class CLI
         end
     end
 
-    def activity_details(option)
+    def activity_details
         #:activity, :type, :participants, :price 
         #puts "Activity: #
     end
