@@ -30,8 +30,9 @@ class CLI
 
     # def print_random_activity
     #     Activity.all.each do |random_activity|
-    #         puts "#{random_activity}"
     #         binding.pry
+    #         puts "#{random_activity[0]}"
+    #         # binding.pry
     #     end
     #     see_more
     # end
