@@ -28,19 +28,19 @@ class CLI
         end
     end
 
-    def print_random_activity
-        Activity.all.each do |random_activity|
-            puts "#{random_activity.activity}"
-            #binding.pry
-        end
-        see_more
-    end
+    # def print_random_activity
+    #     Activity.all.each do |random_activity|
+    #         puts "#{random_activity}"
+    #         binding.pry
+    #     end
+    #     see_more
+    # end
 
     def see_more
         puts "Would you like to learn more about this activity and what it requires? Enter 'y' for yes, 'n' to see a different option, or 'exit' to end our session."
         choice = user_input
         if choice == "y"
-            ####
+            activity_details
         elsif "n"
             print_random_activity
         elsif "exit"
@@ -49,6 +49,13 @@ class CLI
             error_message
         end
     end
+
+    def activity_details(option)
+        #:activity, :type, :participants, :price 
+        #puts "Activity: #
+    end
+
+
 
     def error_message
         puts "I don't recognize that entry. To continue, please enter a valid selection."
