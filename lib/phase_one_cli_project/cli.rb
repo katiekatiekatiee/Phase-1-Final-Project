@@ -49,7 +49,9 @@ class CLI
         if choice == "y"
             activity_details
         elsif choice == "n"
-            print_random_activity       # CURRENTLY JUST PRINTS SAME ACTIVITY
+            Activity.all.clear
+            API.get_data
+            print_random_activity       
         elsif choice == "exit"
             exit_message                
         else
