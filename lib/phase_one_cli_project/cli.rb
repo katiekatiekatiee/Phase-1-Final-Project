@@ -13,7 +13,7 @@ class CLI
     end
 
     def greeting(name)
-        puts "Nice to meet you, #{name}! You must be bored. Let's fix that! Enter 'y' to get assigned an random, fun activity, or 'exit' to close our session."
+        puts "Nice to meet you, #{name}! You must be bored. Let's fix that! Enter 'y' to get assigned a random, fun activity, or 'exit' to close our session."
         menu
     end
 
@@ -40,21 +40,33 @@ class CLI
         choice = user_input
         if choice == "y"
             activity_details
-        elsif "n"
-            print_random_activity
-        elsif "exit"
-            exit_message
+        elsif choice == "n"
+            print_random_activity       # CURRENTLY JUST PRINTS SAME ACTIVITY
+        elsif choice == "exit"
+            exit_message                
         else
-            error_message
+            error_message            
         end
     end
 
     def activity_details
-        #:activity, :type, :participants, :price 
-        #puts "Activity: #
+        Activity.all.each do |random_activity| 
+            puts "Activity: #{random_activity.activity}"
+            puts "Type: #{random_activity.type}"
+            puts "Participants: #{random_activity.participants}"
+            puts "Cost: $#{random_activity.price}" #FORMAT THIS SO IT LOOKS LIKE A REAL COST
+        end
+        puts "If this looks good, enter 'exit' to get out there and get started! Otherwise, enter 'menu' to return to the main menu and make a new selection."
+        answer = user_input
+        if answer == "exit"
+            exit_message
+        elsif answer == "menu"
+            puts "Enter 'y' to see a new option."
+            menu
+        else
+            error_message
+        end
     end
-
-
 
     def error_message
         puts "I don't recognize that entry. To continue, please enter a valid selection."
