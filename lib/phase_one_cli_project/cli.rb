@@ -2,7 +2,7 @@ class CLI
 
     def start
         puts "-------------------------------------------------------------------------------------"
-        puts "Welcome! We're so glad you made it. What should we call you? (Please enter your name)"
+        puts "Welcome! We're so glad you made it. What should we call you? (Please enter your name)".colorize(:green)
         puts "-------------------------------------------------------------------------------------"
         API.get_data
         input = user_input
@@ -16,7 +16,7 @@ class CLI
 
     def greeting(name)
         puts "-----------------------------------------------------------------------------------------------------------------------------------------------"
-        puts "Nice to meet you, #{name}! You must be bored. Let's fix that! Enter 'y' to get assigned a random, fun activity, or 'exit' to close our session."
+        puts "Nice to meet you, #{name}! You must be bored. Let's fix that! Enter 'y' to get assigned a random, fun activity, or 'exit' to close our session.".colorize(:green)
         puts "-----------------------------------------------------------------------------------------------------------------------------------------------"
         menu
     end
@@ -35,7 +35,7 @@ class CLI
     def print_random_activity
         Activity.all.each do |random_activity|
             puts "----------------------------------------"
-            puts "#{random_activity.activity}"   
+            puts "#{random_activity.activity}".colorize(:blue)   
             puts "----------------------------------------"
         end
         see_more
@@ -43,7 +43,7 @@ class CLI
 
     def see_more
         puts "------------------------------------------------------------------------------------------------------------------------------------------------------"
-        puts "Would you like to learn more about this activity and what it requires? Enter 'y' for yes, 'n' to see a different option, or 'exit' to end our session."
+        puts "Would you like to learn more about this activity and what it requires? Enter 'y' for yes, 'n' to see a different option, or 'exit' to end our session.".colorize(:green)
         puts "------------------------------------------------------------------------------------------------------------------------------------------------------"
         choice = user_input
         if choice == "y"
@@ -62,17 +62,17 @@ class CLI
     def activity_details
         Activity.all.each do |random_activity| 
             puts "---------------------------------------------"
-            puts "Activity: #{random_activity.activity}"
+            puts "Activity: #{random_activity.activity}".colorize(:blue)
             puts "-------------------------------------"
-            puts "Type: #{random_activity.type}"
+            puts "Type: #{random_activity.type}".colorize(:blue)
             puts "-------------------------------------"
-            puts "Participants: #{random_activity.participants}"
+            puts "Participants: #{random_activity.participants}".colorize(:blue)
             puts "---------------------------------------------"
-            puts "Cost: $#{random_activity.price}" #FORMAT THIS SO IT LOOKS LIKE A REAL COST
+            puts "Cost: $#{random_activity.price}".colorize(:blue) #FORMAT THIS SO IT LOOKS LIKE A REAL COST
             puts "-------------------------------"
         end
         puts "-----------------------------------------------------------------------------------------------------------------------------------------------"
-        puts "If this looks good, enter 'exit' to get out there and get started! Otherwise, enter 'menu' to return to the main menu and make a new selection."
+        puts "If this looks good, enter 'exit' to get out there and get started! Otherwise, enter 'menu' to return to the main menu and make a new selection.".colorize(:green)
         puts "-----------------------------------------------------------------------------------------------------------------------------------------------"
         answer = user_input
         if answer == "exit"
@@ -89,14 +89,14 @@ class CLI
 
     def error_message
         puts "--------------------------------------------------------------------------"
-        puts "I don't recognize that entry. To continue, please enter a valid selection."
+        puts "I don't recognize that entry. To continue, please enter a valid selection.".colorize(:red)
         puts "--------------------------------------------------------------------------"
         menu
     end
 
     def exit_message
         puts "---------------------------------------------------------"
-        puts "I hope you found something fun to do! See you again soon!"
+        puts "I hope you found something fun to do! See you again soon!".colorize(:green)
         puts "---------------------------------------------------------"
     end
     
