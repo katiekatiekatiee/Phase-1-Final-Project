@@ -83,7 +83,7 @@ class CLI
             exit_message
         elsif answer == "menu"
             puts "------------------------------"
-            puts "Enter 'y' to see a new option."
+            puts "Enter 'y' to see a new option.".colorize(:green)
             puts "------------------------------"
             menu
         else
