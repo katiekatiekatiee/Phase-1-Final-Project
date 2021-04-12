@@ -15,10 +15,14 @@ class CLI
     end
 
     def greeting(name)
-        puts "-----------------------------------------------------------------------------------------------------------------------------------------------"
-        puts "Nice to meet you, #{name}! You must be bored. Let's fix that! Enter 'y' to get assigned a random, fun activity, or 'exit' to close our session.".colorize(:green)
-        puts "-----------------------------------------------------------------------------------------------------------------------------------------------"
-        menu
+        if name == "exit"
+            exit_message
+        else
+            puts "-----------------------------------------------------------------------------------------------------------------------------------------------"
+            puts "Nice to meet you, #{name}! You must be bored. Let's fix that! Enter 'y' to get assigned a random, fun activity, or 'exit' to close our session.".colorize(:green)
+            puts "-----------------------------------------------------------------------------------------------------------------------------------------------"
+            menu
+        end
     end
 
     def menu
