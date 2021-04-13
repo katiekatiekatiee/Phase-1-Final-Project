@@ -72,7 +72,7 @@ class CLI
             puts "-------------------------------------"
             puts "Participants: #{random_activity.participants}".colorize(:blue)
             puts "---------------------------------------------"
-            puts "Cost: $#{random_activity.price.to_i*10}".colorize(:blue) #FORMAT THIS SO IT LOOKS LIKE A REAL COST
+            puts "Cost: $#{random_activity.price}".colorize(:blue) 
             puts "-------------------------------"
         end
         puts "-----------------------------------------------------------------------------------------------------------------------------------------------"
