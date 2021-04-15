@@ -29,7 +29,7 @@ class CLI
         choice = user_input
         if choice == "y"
             print_random_activity
-        elsif choice == "exit"
+        elsif choice == "exit" || choice == "n"
             exit_message
         else
             error_message 
