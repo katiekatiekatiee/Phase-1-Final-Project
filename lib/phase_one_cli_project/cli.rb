@@ -19,7 +19,7 @@ class CLI
             exit_message
         else
             puts "-----------------------------------------------------------------------------------------------------------------------------------------------"
-            puts "Nice to meet you, #{name}! You must be bored. Let's fix that! Enter 'y' to get assigned a random, fun activity, or 'exit' to close our session.".colorize(:green)
+            puts "Nice to meet you, #{name.capitalize}! You must be bored. Let's fix that! Enter 'y' to get assigned a random, fun activity, or 'exit' to close our session.".colorize(:green)
             puts "-----------------------------------------------------------------------------------------------------------------------------------------------"
             menu
         end
