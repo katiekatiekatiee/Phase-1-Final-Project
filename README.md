@@ -1,16 +1,12 @@
 # PhaseOneCliProject
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/phase_one_cli_project`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to the "Bored?" CLI! Here you can access a wide range of activities to do, designed to cure boredom. However, this is a random generator, so you will only be assigned a single, random activity at a time. Following the prompts, you are able to view an activity, then more information about that activity (including its cost, the number of participants you will need, and the kind of activity that was chosen for you). Once an activity looks appealing, you can simply exit the program and get started! 
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-```ruby
 gem 'phase_one_cli_project'
-```
 
 And then execute:
 
@@ -22,7 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To begin the application, simply enter "ruby bin/run" into the terminal. 
+
+Following the prompts, you'll be asked to enter your name first, and the program will then greet you and ask for an entry to proceed ("y" will present you with your first randomly generated activity).
+
+From here, you can either enter "y" again to view more information on the given activity, "n" to see a different one, or "exit" to close the program. 
+
+If you have selected "y" to see more information, you will still be able to access the menu and get another activity to do if you are not interested in the first one. Here, you will also be given the opportunity to review the activity details or, as always, "exit" to end the session. 
 
 ## Development
 
