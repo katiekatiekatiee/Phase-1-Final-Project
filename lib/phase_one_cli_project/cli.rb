@@ -47,8 +47,9 @@ class CLI
 
     def see_more
         puts 
-        puts "Would you like to learn more about this activity and what it requires? Enter 'y' for yes, 'n' to see a different option, or 'exit' to end our session.".colorize(:green)
-        puts 
+        puts "Would you like to learn more about this activity and what it requires?".colorize(:green)
+        puts "Enter ‘y’ for yes, enter ‘n’ to see a new activity, or enter ‘exit’ to end the session.".colorize(:green)
+        puts
         choice = user_input
         if choice == "y"
             activity_details
