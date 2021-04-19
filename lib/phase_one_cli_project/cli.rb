@@ -1,9 +1,9 @@
 class CLI   
 
     def start
-        puts "-------------------------------------------------------------------------------------"
+        puts 
         puts "Welcome! We're so glad you made it. What should we call you? (Please enter your name)".colorize(:green)
-        puts "-------------------------------------------------------------------------------------"
+        puts 
         API.get_data
         input = user_input
         greeting(input)
@@ -18,9 +18,9 @@ class CLI
         if name == "exit"
             exit_message
         else
-            puts "-----------------------------------------------------------------------------------------------------------------------------------------------"
+            puts 
             puts "Nice to meet you, #{name.capitalize}! You must be bored. Let's fix that! Enter 'y' to get assigned a random, fun activity, or 'exit' to close our session.".colorize(:green)
-            puts "-----------------------------------------------------------------------------------------------------------------------------------------------"
+            puts 
             menu
         end
     end
@@ -38,17 +38,17 @@ class CLI
 
     def print_random_activity
         Activity.all.each do |random_activity|
-            puts "----------------------------------------"
+            puts 
             puts "#{random_activity.activity}".colorize(:blue)   
-            puts "----------------------------------------"
+            puts 
         end
         see_more
     end
 
     def see_more
-        puts "------------------------------------------------------------------------------------------------------------------------------------------------------"
+        puts 
         puts "Would you like to learn more about this activity and what it requires? Enter 'y' for yes, 'n' to see a different option, or 'exit' to end our session.".colorize(:green)
-        puts "------------------------------------------------------------------------------------------------------------------------------------------------------"
+        puts 
         choice = user_input
         if choice == "y"
             activity_details
@@ -67,24 +67,24 @@ class CLI
         Activity.all.each do |random_activity| 
             puts "---------------------------------------------"
             puts "Activity: #{random_activity.activity}".colorize(:blue)
-            puts "-------------------------------------"
+            puts "---------------------------------------------"
             puts "Type: #{random_activity.type}".colorize(:blue)
-            puts "-------------------------------------"
+            puts "---------------------------------------------"
             puts "Participants: #{random_activity.participants}".colorize(:blue)
             puts "---------------------------------------------"
             puts "Cost: $#{random_activity.price}".colorize(:blue) 
-            puts "-------------------------------"
+            puts "---------------------------------------------"
         end
-        puts "-----------------------------------------------------------------------------------------------------------------------------------------------"
+        puts 
         puts "If this looks good, enter 'exit' to get out there and get started! Otherwise, enter 'menu' to return to the main menu and make a new selection.".colorize(:green)
-        puts "-----------------------------------------------------------------------------------------------------------------------------------------------"
+        puts 
         answer = user_input
         if answer == "exit"
             exit_message
         elsif answer == "menu"
-            puts "----------------------------------------------------------"
+            puts 
             puts "Enter 'y' to review this idea and check out other options.".colorize(:green)
-            puts "----------------------------------------------------------"
+            puts 
             menu
         else
             error_message
@@ -92,16 +92,16 @@ class CLI
     end
 
     def error_message
-        puts "--------------------------------------------------------------------------"
+        puts 
         puts "I don't recognize that entry. To continue, please enter a valid selection.".colorize(:red)
-        puts "--------------------------------------------------------------------------"
+        puts 
         menu
     end
 
     def exit_message
-        puts "---------------------------------------------------------"
+        puts 
         puts "I hope you found something fun to do! See you again soon!".colorize(:green)
-        puts "---------------------------------------------------------"
+        puts 
     end
     
 end
