@@ -2,7 +2,7 @@
 
 #require_relative "phase_one_cli_project/version"
 
-require "colorize"
+#require "colorize"
 require "bundler"
 Bundler.require
 
